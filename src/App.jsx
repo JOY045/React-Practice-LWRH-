@@ -1,9 +1,12 @@
 const App = () => {
+
+  let marks = 81;
+
   return (
     <div>
-      <h1 className="heading">Hello, I am React</h1>
-      <input type="text" placeholder="Enter Your Name" />
-      <button onClick={() => alert("Hello")}>Submit</button>
+      {marks > 80 ?
+        <h1>Congratulations!</h1> :
+       <h1>Sorry!</h1>}
     </div>
   );
 };
