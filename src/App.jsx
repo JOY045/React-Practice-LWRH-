@@ -1,9 +1,9 @@
 const App = () => {
   return (
     <div>
-      <h1>Hello, I am React</h1>
+      <h1 className="heading">Hello, I am React</h1>
       <input type="text" placeholder="Enter Your Name" />
-      <button>Submit</button>
+      <button onClick={() => alert("Hello")}>Submit</button>
     </div>
   );
 };
