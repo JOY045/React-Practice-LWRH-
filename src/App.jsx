@@ -1,18 +1,24 @@
 const App = () => {
 
-  const cities = ['Dhaka', 'Sylhet', 'Rangpur', 'Barisal', 'Khulna']
+  const status = true;
 
-  return (
-    <div>
-      <ul>
-        {
-          cities.map((city, index) => {
-            return <li key={index}>{city}</li>
-          })
-        }
-      </ul>
-    </div>
-  );
+  if (status == true) {
+    return (
+      <div>
+        <h1>Logged In</h1>
+        <button>Logout</button>
+      </div>
+    )
+  }
+
+  else {
+    return (
+      <div>
+        <h1>Logged Out</h1>
+        <button>Login</button>
+      </div>
+    )
+  }
 };
 
 export default App;
