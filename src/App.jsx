@@ -1,14 +1,21 @@
 const App = () => {
 
-  const isLoginStatus = true
+  const isLoginStatus = false
 
   return (
     <div>
-      {
-        isLoginStatus == true ?
-          <button>Logout</button> :
-          <button>Login</button>
-      }
+      {(() => {
+        if (isLoginStatus == true) {
+          return (
+            <button>Logout</button>
+          )
+        }
+        else {
+          return (
+            <button>Login</button>
+          )
+        }
+      })()}
     </div>
   )
 
