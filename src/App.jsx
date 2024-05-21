@@ -1,15 +1,16 @@
 const App = () => {
 
-  const isLoggedIn = true
+  const isLoginStatus = true
 
-  switch (isLoggedIn) {
-    case true:
-      return <button>Logout</button>;
-    case false:
-      return <button>Login</button>;
-    default:
-      return null;
-  }
+  return (
+    <div>
+      {
+        isLoginStatus == true ?
+          <button>Logout</button> :
+          <button>Login</button>
+      }
+    </div>
+  )
 
 };
 
