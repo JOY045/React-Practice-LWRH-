@@ -1,21 +1,10 @@
-const App = () => {
+import Hero from './components/Hero';
 
-  const isLoginStatus = false
+const App = () => {
 
   return (
     <div>
-      {(() => {
-        if (isLoginStatus == true) {
-          return (
-            <button>Logout</button>
-          )
-        }
-        else {
-          return (
-            <button>Login</button>
-          )
-        }
-      })()}
+      <Hero title = "Learn React" description = "Sending simple data parent to child"/>
     </div>
   )
 
