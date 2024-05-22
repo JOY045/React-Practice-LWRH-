@@ -2,19 +2,17 @@ import { useRef } from "react";
 
 const App = () => {
 
-  let myHeadLine = useRef();
+  let myImage = useRef();
   
   const change = () => {
-    // myHeadLine.current.innerHTML = "Hello Worlds";
-    myHeadLine.innerHTML = "Hello Worlds";
+    // myImage.current.src = "https://placehold.co/600x400?text=Hello+World"
+    myImage.current.setAttribute("height", "300px")
+    myImage.current.setAttribute("width", "500px")
   }
 
   return (
     <div>
-      {/* <h1 ref={myHeadLine}>Hello World</h1> */}
-      <h1 ref={(e) => {
-        myHeadLine =e
-      }}>Hello World</h1>
+      <img ref={myImage} src="https://placehold.co/600x400"/>
       <button onClick={change}>Change</button>
     </div>
   );
