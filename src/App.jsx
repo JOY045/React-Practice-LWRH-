@@ -1,17 +1,11 @@
-import Hero from './components/Hero';
-
 const App = () => {
-
-  const btnClick = () => {
-    alert("Say Hello")
-  }
-
   return (
     <div>
-      <Hero childBtnClick = {btnClick} />
+      <button onClick={() => {
+        alert("You Clicked Me")
+      }}>Submit</button>
     </div>
-  )
-
+  );
 };
 
 export default App;
