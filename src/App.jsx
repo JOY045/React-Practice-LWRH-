@@ -2,18 +2,13 @@ import Hero from './components/Hero';
 
 const App = () => {
 
-  const items = {
-    name: "Shoeb",
-    age: 24,
-    address: {
-      city: "London",
-      country: "UK"
-    }
+  const btnClick = () => {
+    alert("Say Hello")
   }
 
   return (
     <div>
-      <Hero item = {items}/>
+      <Hero childBtnClick = {btnClick} />
     </div>
   )
 
