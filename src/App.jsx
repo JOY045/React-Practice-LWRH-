@@ -2,17 +2,22 @@ import { useRef } from "react";
 
 const App = () => {
 
-  let myImage = useRef();
+  let firstName, lastName = useRef();
   
   const change = () => {
-    // myImage.current.src = "https://placehold.co/600x400?text=Hello+World"
-    myImage.current.setAttribute("height", "300px")
-    myImage.current.setAttribute("width", "500px")
+    let fName = firstName.value
+    let lName = lastName.value
+
+    alert(fName + " " + lName)
   }
 
   return (
     <div>
-      <img ref={myImage} src="https://placehold.co/600x400"/>
+      <input ref={(a) => firstName = a} type="text" placeholder="First Name" />
+      <br />
+      <input ref={(b) => lastName = b} type="text" placeholder="Last Name" />
+      <br />
+      
       <button onClick={change}>Change</button>
     </div>
   );
