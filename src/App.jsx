@@ -2,9 +2,18 @@ import Hero from './components/Hero';
 
 const App = () => {
 
+  const items = {
+    name: "Shoeb",
+    age: 24,
+    address: {
+      city: "London",
+      country: "UK"
+    }
+  }
+
   return (
     <div>
-      <Hero title = "Learn React" description = "Sending simple data parent to child"/>
+      <Hero item = {items}/>
     </div>
   )
 

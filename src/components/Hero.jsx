@@ -3,14 +3,19 @@ const Hero = (props) => {
         <div>
             <h1>
                 {
-                    props.title
+                    props.item.name
                 }
             </h1>
-            <p>
+            <h1>
                 {
-                    props.description
+                    props.item.age
                 }
-            </p>
+            </h1>
+            <h1>
+                {
+                    props.item.address.city
+                }
+            </h1>
         </div>
     );
 };
