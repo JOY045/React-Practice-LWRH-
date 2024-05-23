@@ -2,20 +2,18 @@ import { useRef } from "react";
 
 const App = () => {
 
-  let firstName, lastName = useRef();
+  let number = useRef(0);
   
   const change = () => {
-    let fName = firstName.value
-    let lName = lastName.value
-
-    alert(fName + " " + lName)
+    number.current++
+    console.log(number.current)
   }
 
   return (
     <div>
-      <input ref={(a) => firstName = a} type="text" placeholder="First Name" />
+      <input type="text" placeholder="First Name" />
       <br />
-      <input ref={(b) => lastName = b} type="text" placeholder="Last Name" />
+      <input type="text" placeholder="Last Name" />
       <br />
       
       <button onClick={change}>Change</button>
