@@ -1,25 +1,15 @@
-import { useRef } from "react";
+import { useState } from "react";
 
 const App = () => {
 
-  let APIData = useRef(null)
-  let myPTag = useRef()
-  
-  const fetchData = async () => {
-    const res = await fetch("https://dummyjson.com/products")
-    APIData.current = await res.json()
-  }
-
-  const showData = () => {
-    myPTag.current.innerText = JSON.stringify(APIData.current)
-  }
+  const [number, setNumber] = useState(0);
 
   return (
     <div>
-      <p ref={myPTag}></p>
-
-      <button onClick={fetchData}>Call API</button>
-      <button onClick={showData}>Show Data</button>
+      <h1>Number: {number}</h1>
+      <button onClick={() => setNumber(number+1)}>Increase</button>
+      <button onClick={() => setNumber(number-1)}>Decrease</button>
+      <button onClick={() => setNumber(0)}>Reset</button>
     </div>
   );
 };
