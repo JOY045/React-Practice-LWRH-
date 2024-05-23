@@ -2,14 +2,25 @@ import { useState } from "react";
 
 const App = () => {
 
-  const [number, setNumber] = useState(0);
+  const [myObj, setMyObj] = useState({
+    key1: "value 1",
+    key2: "value 2",
+    key3: "value 3"
+  });
+
+  const change = () => {
+    setMyObj(
+      {
+       ...myObj,
+        key1: "new value 1"
+      }
+    )
+  }
 
   return (
     <div>
-      <h1>Number: {number}</h1>
-      <button onClick={() => setNumber(number+1)}>Increase</button>
-      <button onClick={() => setNumber(number-1)}>Decrease</button>
-      <button onClick={() => setNumber(0)}>Reset</button>
+      <h1>{myObj.key1}</h1>
+      <button onClick={change}>Change</button>
     </div>
   );
 };
