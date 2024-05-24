@@ -3,12 +3,14 @@ import { useState } from "react";
 
 const App = () => {
 
-  const [data, setData] = useState([])
+  const [data, setData] = useState()
 
   useEffect(() => {
-    fetch('https://dummyjson.com/products')
-      .then(res => res.json())
-      .then(json => setData(json))
+    (async () => {
+      let response = await fetch('https://dummyjson.com/products/1')
+      let json = await response.json()
+      setData(json)
+    })()
   }, [])
   
   return (
